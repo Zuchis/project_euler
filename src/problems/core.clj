@@ -1,12 +1,12 @@
-(ns problems.core)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(ns problems.core
+  (:import (java.lang.Math)))
 
 (defn sum [xs]
   (reduce + xs))
 
 (defn product [xs]
   (reduce * xs))
+
+(def infiniteList (range))
+
+(def infinitePrimes (drop 2 (range)))
