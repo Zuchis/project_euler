@@ -6,6 +6,4 @@
     true
     false))
 
-(multiples 9) ;;test
-
-(println (sum (filter multiples (range 1000))))
+(defn run1 [] (sum (filter multiples (range 1000))))

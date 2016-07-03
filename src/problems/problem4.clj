@@ -9,9 +9,5 @@
         y (range 100 999)]
     (* x y)))
 
-(def biggest-palyndrome 
+(defn run4 [] 
   (apply max (filter (fn [x] (palindrome? (str x))) products)))
-
-(def run2 biggest-palyndrome)
-
-(println run2)
