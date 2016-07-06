@@ -23,6 +23,15 @@
     true
     false))
 
+(defn multiple-rev [x y]
+  (if (= (mod y x) 0)
+    true
+    false))
+
+(def prime-sieve 
+  ((fn sieve [xs]
+    (lazy-seq (cons (first xs) (sieve (filter (comp not (partial multiple-rev (first xs))) xs))))) infinitePrimes))
+
 (set! *warn-on-reflection* true)
 
 ;(defn parse-int [s]
